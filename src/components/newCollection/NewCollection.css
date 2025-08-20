@@ -1,27 +1,73 @@
-.new-collections{
+.new-collections {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
- 
   margin-bottom: 100px;
-  
 }
-.new-collections h1{
+
+.new-collections h1 {
   color: #171717;
   font-size: 50px;
   font-weight: 600;
+  text-align: center;
 }
+
 .new-collections hr {
   width: 200px;
   height: 6px;
   border-radius: 10px;
   background: #252525;
 }
-.collections{
+
+.collections {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* Default 4 columns */
   margin-top: 50px;
   gap: 50px;
+}
 
+/* ========================= */
+/* RESPONSIVE ADJUSTMENTS */
+/* ========================= */
+
+/* Large Tablets */
+@media (max-width: 1024px) {
+  .collections {
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+    gap: 40px;
+  }
+
+  .new-collections h1 {
+    font-size: 40px;
+  }
+}
+
+/* Small Tablets */
+@media (max-width: 768px) {
+  .collections {
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 30px;
+  }
+
+  .new-collections h1 {
+    font-size: 32px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .collections {
+    grid-template-columns: 1fr; /* Single column */
+    gap: 20px;
+  }
+
+  .new-collections h1 {
+    font-size: 26px;
+  }
+
+  .new-collections hr {
+    width: 120px;
+    height: 4px;
+  }
 }

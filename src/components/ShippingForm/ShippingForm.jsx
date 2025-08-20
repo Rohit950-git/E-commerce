@@ -100,10 +100,11 @@ const ShippingForm = () => {
       <p><strong>Email:</strong> {item.email}</p>
       <p><strong>Phone:</strong> {item.phone}</p>
       <p><strong>Address:</strong> {item.address}, {item.city}- {item.postalCode}</p>
+    <button className="deliver-btn">Deliver Here 🚚</button>
     </div>
   ))}
 
-  <button className="deliver-btn">Deliver Here 🚚</button>
+ 
 
 </div>
 

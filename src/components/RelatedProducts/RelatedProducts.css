@@ -1,25 +1,71 @@
-.relatedProducts{
+.relatedProducts {
   display: flex;
-flex-direction: column;
-align-items: center;
-gap: 10px;
-height: 90vh;
-
-
-
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-height: 90vh; /* use min-height for flexibility */
+  padding: 20px;
 }
+
 .relatedProducts h1 {
   color: #171717;
   font-size: 50px;
   font-weight: 600;
+  text-align: center;
 }
-.relatedProducts hr{
+
+.relatedProducts hr {
   width: 200px;
   height: 6px;
   border-radius: 10px;
+  background: #252525;
 }
-  .relatedproducts-item{
-margin-top: 50px;
-display: flex;
-gap: 30px;
+
+/* Grid instead of flex for better responsiveness */
+.relatedproducts-item {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row by default */
+  gap: 30px;
+}
+
+/* 📱 Tablets */
+@media (max-width: 1024px) {
+  .relatedproducts-item {
+    grid-template-columns: repeat(3, 1fr); /* 3 items */
+    gap: 25px;
   }
+
+  .relatedProducts h1 {
+    font-size: 40px;
+  }
+}
+
+/* 📱 Mobile Landscape */
+@media (max-width: 768px) {
+  .relatedproducts-item {
+    grid-template-columns: repeat(2, 1fr); /* 2 items */
+    gap: 20px;
+  }
+
+  .relatedProducts h1 {
+    font-size: 32px;
+  }
+}
+
+/* 📱 Mobile Portrait */
+@media (max-width: 480px) {
+  .relatedproducts-item {
+    grid-template-columns: 1fr; /* 1 item per row */
+    gap: 15px;
+  }
+
+  .relatedProducts h1 {
+    font-size: 26px;
+  }
+
+  .relatedProducts hr {
+    width: 120px;
+    height: 4px;
+  }
+}

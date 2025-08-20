@@ -1,4 +1,4 @@
-.newsletter{
+.newsletter {
   width: 65%;
   height: 40vh;
   display: flex;
@@ -8,43 +8,44 @@
   margin: auto;
   padding: 0px 140px;
   margin-bottom: 150px;
-  background: linear-gradient(180deg, #fde1ff 0% #e1ffea22 60%);
-gap:30px ;
-
+  background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+  gap: 30px;
+  text-align: center;
 }
-.newsletter h1{
-  color:#454545 ;
+
+.newsletter h1 {
+  color: #454545;
   font-size: 55px;
   font-weight: 600;
-
-
 }
-.newsletter p{
+
+.newsletter p {
   color: #454545;
   font-size: 20px;
 }
-.newsletterdiv{
+
+.newsletterdiv {
   display: flex;
-  align-items:center ;
+  align-items: center;
   justify-content: space-between;
-  background:white ;
+  background: white;
   width: 730px;
   height: 71px;
   border-radius: 80px;
   border: 1px solid #e3e3e3;
-
-
+  overflow: hidden;
 }
-.newsletter input{
+
+.newsletter input {
   width: 500px;
   margin-left: 30px;
   border: none;
   outline: none;
   font-family: Poppins;
   font-size: 16px;
-
 }
-.newsletter div button{
+
+.newsletter div button {
   width: 210px;
   height: 70px;
   border-radius: 80px;
@@ -52,4 +53,103 @@ gap:30px ;
   color: white;
   font-size: 16px;
   cursor: pointer;
+  border: none;
+}
+
+/* ========================= */
+/* RESPONSIVE BREAKPOINTS */
+/* ========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .newsletter {
+    width: 85%;
+    padding: 0px 60px;
+    height: auto;
+  }
+
+  .newsletter h1 {
+    font-size: 40px;
+  }
+
+  .newsletterdiv {
+    width: 100%;
+    height: 65px;
+  }
+
+  .newsletter input {
+    width: 60%;
+  }
+
+  .newsletter div button {
+    width: 40%;
+    height: 65px;
+  }
+}
+
+/* Small Tablets & Large Phones */
+@media (max-width: 768px) {
+  .newsletter {
+    width: 90%;
+    padding: 0px 30px;
+  }
+
+  .newsletter h1 {
+    font-size: 32px;
+  }
+
+  .newsletterdiv {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border-radius: 20px;
+    gap: 10px;
+  }
+
+  .newsletter input {
+    width: 100%;
+    margin: 0;
+    height: 50px;
+    padding: 0 10px;
+    font-size: 14px;
+  }
+
+  .newsletter div button {
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .newsletter {
+    width: 95%;
+    padding: 0px 15px;
+  }
+
+  .newsletter h1 {
+    font-size: 26px;
+  }
+
+  .newsletter p {
+    font-size: 16px;
+  }
+
+  .newsletterdiv {
+    flex-direction: column;
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .newsletter input {
+    font-size: 14px;
+    height: 45px;
+  }
+
+  .newsletter div button {
+    font-size: 14px;
+    height: 45px;
+  }
 }

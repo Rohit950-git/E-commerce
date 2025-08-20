@@ -53,9 +53,49 @@
   background: #e4574f;
 }
 
-/* Responsive */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
   .billing-container {
     width: 100%;
+    padding: 15px;
+  }
+
+  .cartitems-total-item {
+    flex-direction: column; /* Stack text on smaller screens */
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .cartitems-total-item h3 {
+    font-size: 18px; /* Slightly smaller on mobile */
+  }
+
+  .cartitems-total-item p {
+    font-size: 14px;
+  }
+
+  .billing-btn {
+    padding: 10px;
+    font-size: 15px;
+  }
+}
+
+/* Extra small screens (<480px) */
+@media (max-width: 480px) {
+  .billing-container {
+    padding: 12px;
+  }
+
+  .cartitems-total-item h3 {
+    font-size: 16px;
+  }
+
+  .cartitems-total-item p {
+    font-size: 13px;
+  }
+
+  .billing-btn {
+    padding: 8px;
+    font-size: 14px;
   }
 }

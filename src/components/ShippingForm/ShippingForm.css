@@ -60,6 +60,7 @@
 .shipping-form button:hover {
   background: #0056b3;
 }
+
 /* ===== Submission List ===== */
 .submission-list {
   display: flex;
@@ -78,13 +79,11 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Hover effect */
 .submission-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
 
-/* Card Title (Name) */
 .submission-card h4 {
   margin: 0 0 8px;
   color: #007bff;
@@ -92,7 +91,6 @@
   font-weight: bold;
 }
 
-/* Card Text */
 .submission-card p {
   margin: 4px 0;
   font-size: 14px;
@@ -102,6 +100,8 @@
 .submission-card strong {
   color: #222;
 }
+
+/* Deliver Button */
 .deliver-btn {
   padding: 14px 20px;
   background: linear-gradient(135deg, #28a745, #218838);
@@ -124,4 +124,62 @@
 
 .deliver-btn:active {
   transform: scale(0.98);
+}
+
+/* ================== RESPONSIVE ================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .shipping-container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .shipping-container h2 {
+    font-size: 22px;
+  }
+
+  .shipping-container h3 {
+    font-size: 16px;
+  }
+
+  .submission-card {
+    padding: 12px 15px;
+  }
+
+  .submission-card h4 {
+    font-size: 16px;
+  }
+
+  .submission-card p {
+    font-size: 13px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .shipping-container {
+    max-width: 95%;
+    margin: 20px auto;
+    padding: 12px;
+  }
+
+  .shipping-form input,
+  .shipping-form button {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .deliver-btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .submission-card h4 {
+    font-size: 15px;
+  }
+
+  .submission-card p {
+    font-size: 12px;
+  }
 }
