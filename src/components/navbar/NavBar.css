@@ -1,0 +1,137 @@
+/* ===== Navbar Base ===== */
+.navbar {
+    position: fixed;          /* Always visible at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+
+    flex-wrap: wrap;
+}
+
+/* ===== Logo Section ===== */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.nav-logo img {
+    width: 48px;
+    height: auto;
+}
+
+.nav-logo p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #222;
+    margin: 0;
+}
+
+/* ===== Navigation Menu ===== */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-menu li {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #444;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-menu li:hover {
+    color: #ff6600;
+}
+
+.nav-menu li::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #ff6600;
+    transition: width 0.3s ease;
+}
+
+.nav-menu li:hover::after {
+    width: 100%;
+}
+
+/* ===== Login & Cart Section ===== */
+.nav-login-cart {
+    display: flex ;
+    align-items: center;
+    gap: 30px;
+    
+    position: sticky;
+}
+
+.nav-login-cart button {
+   
+    background-color: #ff6600;
+    color: #090707;
+    border: none;
+    padding: 8px 18px;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+     margin-right: 50px;
+}
+
+.nav-login-cart button:hover {
+    background-color: #e55a00;
+}
+
+.nav-login-cart img {
+    width: 28px;
+    height: auto;
+    cursor: pointer;
+
+}
+.nav-cart-count{
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -35px;
+    margin-left: -45px;
+    border-radius: 11px;
+    font-size: 14px;
+    background-color: red;
+    color: white;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 992px) {
+    .nav-menu {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Will be replaced by hamburger in mobile view */
+    }
+  
+}

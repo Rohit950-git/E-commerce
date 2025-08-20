@@ -1,0 +1,61 @@
+.billing-container {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 350px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cartitems-total-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.cartitems-total-item p {
+  margin: 0;
+}
+
+.cartitems-total-item h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+}
+
+.billing-container hr {
+  border: none;
+  height: 1px;
+  background: #ddd;
+  margin: 10px 0;
+}
+
+/* Proceed button */
+.billing-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: #ff6f61;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.billing-btn:hover {
+  background: #e4574f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .billing-container {
+    width: 100%;
+  }
+}
