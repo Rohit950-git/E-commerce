@@ -5,6 +5,7 @@ import cart_icon from '../Assets/cart_icon.png'
 import './NavBar.css';
 import { Link } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
+
 const NavBar = () => {
     const [menu, setMenu] = useState("shop")
    const { getTotalCartItems} = useContext(ShopContext);

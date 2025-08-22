@@ -7,7 +7,8 @@ const BillingDetail = (props) => {
   const {getTotalCartAmount} = useContext(ShopContext)
   const deliveryCharge = props.shippingCharge || 0;
   const SubTotal = getTotalCartAmount();;
-  const Total = SubTotal + deliveryCharge;  
+  const discount = (SubTotal > 85) ? 30 : 0;
+  const Total = SubTotal + deliveryCharge - discount;
   return (
  <div className="billing-container">
       <div className="cartitems-total-item">
@@ -23,6 +24,12 @@ const BillingDetail = (props) => {
       </div>
 
       <hr />
+      
+      <div className="cartitems-total-item">
+        <h3>Discount</h3>
+        <h3>${discount}</h3>
+      </div>
+      <hr/>
 
       <div className="cartitems-total-item">
         <h3>Total</h3>

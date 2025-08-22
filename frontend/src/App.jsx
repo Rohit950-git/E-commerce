@@ -1,4 +1,4 @@
-import react from 'react'
+import React from 'react'
 import NavBar from './components/navbar/NavBar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Shop from './pages/Shop'
