@@ -1,14 +1,21 @@
 import React, { useContext } from 'react'
 import { ShopContext } from '../../Context/ShopContext'
 import './BillingDetail.css'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 const BillingDetail = (props) => {
 
   const {getTotalCartAmount} = useContext(ShopContext)
+  const navigate = useNavigate();
   const deliveryCharge = props.shippingCharge || 0;
   const SubTotal = getTotalCartAmount();;
   const discount = (SubTotal > 85) ? 30 : 0;
   const Total = SubTotal + deliveryCharge - discount;
+
+  const handleNavigate = () => {
+    navigate(`/${props.path}`)
+  }
+  
+  
   return (
  <div className="billing-container">
       <div className="cartitems-total-item">
@@ -36,7 +43,7 @@ const BillingDetail = (props) => {
         <h3>${Total}</h3>
       </div>
 
-      <Link to={`/${props.path}`}><button className="billing-btn">Proceed To {props.location === "checkout"?"CHECKOUT":"PAYMENT"}</button></Link>
+      <button onClick={handleNavigate} className="billing-btn">Proceed To {props.location === "checkout"?"CHECKOUT":"PAYMENT"}</button>
     </div>  )
 }
 

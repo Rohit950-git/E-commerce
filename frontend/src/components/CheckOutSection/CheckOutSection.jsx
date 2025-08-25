@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import BillingDetail from '../BillingDetail/BillingDetail';
 import ShippingForm from '../ShippingForm/ShippingForm';
 import './CheckOutSection.css';
+import Payment from '../Payment/Payment';
 
 const CheckOutSection = () => {
   const [showForm, setShowForm] = useState(false);
@@ -93,6 +94,12 @@ const CheckOutSection = () => {
 
         <div className='right-section'>
           <BillingDetail shippingCharge={DeliveryCharge} path="payment" location="payment" />
+        </div>
+       
+
+       
+        <div>
+
         </div>
       </div>
     </div>
