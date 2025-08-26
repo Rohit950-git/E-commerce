@@ -1,0 +1,44 @@
+
+
+.navbar {
+  display: flex;
+  justify-content: flex-start; /* push content to left */
+  align-items: center;         /* keep vertical center */
+  padding: 0 20px;             /* optional left-right padding */
+}
+
+.nav-p p {
+  margin-bottom: 1px;;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.nav-logo{
+  width: 150px;
+}
+
+
+.nav-profile{
+width: 100px;
+margin-left: 70%;
+}
+@media (max-width: 768px) {
+  .nav-p p {
+    font-size: 22px;
+  }
+
+  .nav-logo {
+    width: 90px;
+  }
+
+  .nav-profile {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-p p {
+    font-size: 18px;
+  }
+}

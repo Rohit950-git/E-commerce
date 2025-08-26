@@ -1,0 +1,63 @@
+/* ===== Sidebar Container ===== */
+.sideBar {
+  position: fixed;             /* stick to left side */
+  top: 190px;
+  left: 0;
+  height: 100vh;               /* full screen height */
+  width: 220px;                /* fixed sidebar width */
+  background: #ffffff;         /* white background */
+  border-right: 1px solid #e0e0e0; /* subtle border */
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;                   /* space between items */
+  box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+}
+
+/* ===== Sidebar Item ===== */
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* start from left */
+  padding: 10px 15px;
+  margin: 0 10px;
+  border-radius: 6px;
+  background: #f6f6f6;
+  gap: 15px;                   /* space between icon & text */
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Hover Effect */
+.sidebar-item:hover {
+  background: #eaeaea;
+}
+
+/* ===== Icon Styling ===== */
+.sidebar-item img {
+  width: 32px;   /* not too small, not too large */
+  height: 32px;
+  object-fit: contain;
+}
+
+/* ===== Text Styling ===== */
+.sidebar-item p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* ===== Responsive (smaller devices) ===== */
+@media (max-width: 768px) {
+  .sideBar {
+    width: 180px;
+  }
+  .sidebar-item img {
+    width: 28px;
+    height: 28px;
+  }
+  .sidebar-item p {
+    font-size: 14px;
+  }
+}
