@@ -81,7 +81,7 @@
     display: flex ;
     align-items: center;
     gap: 30px;
-    
+    margin-right: 100px;
     position: sticky;
 }
 

@@ -1,0 +1,129 @@
+/* ===== ListProduct.css ===== */
+
+.list-Product {
+  margin-left: 250px;
+  width: 100%;             /* FIXED */
+  max-width: 1500px;
+  padding: 20px;
+  background: #f9fafb;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.list-Product h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Header row */
+.listproduct-format-main {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1fr 1fr 1fr 0.5fr;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #e5e7eb;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  position: sticky; /* stays at the top */
+  top: 0;
+  z-index: 10;
+}
+
+/* Scrollable product list */
+.listproduct-allproducts {
+  margin-top: 10px;
+  max-height: 500px;   /* you can adjust height */
+  overflow-y: auto;    /* only this section scrolls */
+  padding-right: 8px;  /* space for scrollbar */
+}
+
+/* Each product row */
+.listproduct-format {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1fr 1fr 1fr 0.5fr;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: all 0.2s ease-in-out;
+  padding: 12px 16px;
+}
+
+.listproduct-format:hover {
+  background: #f3f4f6;
+  transform: scale(1.01);
+}
+
+/* Product image */
+.listproduct-product-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Remove button */
+.listproduct-remove-icon {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.listproduct-remove-icon:hover {
+  transform: scale(1.2);
+  filter: brightness(0.8);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .listproduct-format,
+  .listproduct-format-main {
+    grid-template-columns: 1.5fr 2fr 1fr 1fr 0.8fr;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .listproduct-format,
+  .listproduct-format-main {
+    grid-template-columns: 1.2fr 1.8fr 1fr 0.8fr;
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  .listproduct-product-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .listproduct-format,
+  .listproduct-format-main {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+
+  .listproduct-format {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+  }
+
+  .listproduct-product-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 8px;
+  }
+
+  .listproduct-remove-icon {
+    margin-top: 6px;
+  }
+}
